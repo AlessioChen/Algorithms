@@ -1,0 +1,67 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+def prova(N, isb, ism, isw):
+    x = np.arange(0, N, 1)
+    plt.xlabel('Numero di elementi')
+    plt.ylabel('Tempo di esecuzione')
+    plt.plot(x, isb)
+    plt.plot(x, ism)
+    plt.plot(x, isw)
+    plt.title('Insertion Sort')
+    
+    plt.savefig('InsertionSort.png')
+    plt.clf()
+
+def GraphicPlot(N, isb, ism, isw, msb, msm, msw):
+    x = np.arange(0, N, 1)
+    plt.xlabel('Numero di elementi')
+    plt.ylabel('Tempo di esecuzione')
+    plt.plot(x, isb)
+    plt.plot(x, ism)
+    plt.plot(x, isw)
+    plt.title('Insertion Sort')
+    
+    plt.savefig('InsertionSort.png')
+    plt.clf()
+
+    x = np.arange(0, N, 1)
+    plt.xlabel('Numero di elementi')
+    plt.ylabel('Tempo di esecuzione')
+    plt.plot(x, msb)
+    plt.plot(x, msm)
+    plt.plot(x, msw)
+    plt.title('Merge Sort')
+    plt.legend(['Caso Migliore', 'Caso Medio', 'Caso Peggiore'])
+    plt.savefig('MergeSort.png')
+    plt.clf()
+
+    x = np.arange(0, N, 1)
+    plt.xlabel('Numero di elementi')
+    plt.ylabel('Tempo di esecuzione')
+    plt.plot(x, isb)
+    plt.plot(x, msb)
+    plt.title('Insertion Sort VS Merge Sort - Caso Migliore (Ordinato)')
+    plt.legend(['Insertion Sort', 'Merge Sort'])
+    plt.savefig('BestCase.png')
+    plt.clf()
+
+    x = np.arange(0, N, 1)
+    plt.xlabel('Numero di elementi')
+    plt.ylabel('Tempo di esecuzione')
+    plt.plot(x, ism)
+    plt.plot(x, msm)
+    plt.title('Insertion Sort VS Merge Sort - Caso Medio (Random)')
+    plt.legend(['Insertion Sort', 'Merge Sort'])
+    plt.savefig('MediumCase.png')
+    plt.clf()
+
+    x = np.arange(0, N, 1)
+    plt.xlabel('Numero di elementi')
+    plt.ylabel('Tempo di esecuzione')
+    plt.plot(x, isw)
+    plt.plot(x, msw)
+    plt.title('Insertion Sort VS Merge Sort - Caso Peggiore (Ordinato al contrario)')
+    plt.legend(['Insertion Sort', 'Merge Sort'])
+    plt.savefig('WorstCase.png')
+    plt.clf()
